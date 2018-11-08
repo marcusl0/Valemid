@@ -1,0 +1,74 @@
+import easygui
+import math
+def kolmnurga_pindala():
+    b = float(easygui.enterbox("Kolmnurga alus:"))
+    h = float(easygui.enterbox("Kolmnurga kõrgus:"))
+    pindala = round(b*h/2,2)
+    easygui.msgbox("Kolmnurga pindala on " +str(pindala)+ " .")
+def ruudu_pindala():
+    b = float(easygui.enterbox("Ruudu külg:"))
+    pindala = round(b**2,2)
+    easygui.msgbox("Ruudu pindala on " +str(pindala)+ " .")
+def hulknurga_pindala():
+    n = int(easygui.enterbox("Külgede arv:"))
+    b = float(easygui.enterbox("Külje pikkus:"))
+    c = (b**2-(b/2)**2)**(1/2)
+    pindala = round(n*b*c/2)
+    easygui.msgbox("Korrapärase hulknurga pindala on " +str(pindala)+ " .")
+def trapetsi_pindala():
+    n = int(easygui.enterbox("Külgede arv:"))
+    b = float(easygui.enterbox("Külje pikkus:"))
+    c = (b**2-(b/2)**2)**(1/2)
+    pindala = round(n*b*c/2)
+    easygui.msgbox("Trapetsi pindala on " +str(pindala)+ " .")
+    
+    
+def kolmnurga_pindala():
+    b = float(easygui.enterbox("Kolmnurga alus:"))
+    h = float(easygui.enterbox("Kolmnurga kõrgus:"))
+    pindala = round(b*h/2,2)
+    easygui.msgbox("Kolmnurga pindala on " +str(pindala)+ " .")
+def kolmnurga_ümbermõõt():
+    kolmnurga_külg1 = float(easygui.enterbox("Sisestage esimese külje pikkus:"))
+    kolmnurga_külg2 = float(easygui.enterbox("Sisestage teise külje pikkus:"))
+    kolmnurga_külg3 = float(easygui.enterbox("Sisestage kolmanda külje pikkus:"))
+    kolmnurga_ümbermõõt = kolmnurga_külg1 + kolmnurga_külg2 + kolmnurga_külg3
+def ruudu_ümbermõõt():
+    ruudu_külg = float(easygui.enterbox("Sisestage ruudu külje pikkus:"))
+    ruudu_ümbermõõt = 4 * ruudu_külg
+def rööpküliku_ümbermõõt():
+    rööpküliku_külg1 = float(easygui.enterbox("Sisestage esimese külje pikkus:"))
+    rööpküliku_külg2 = float(easygui.enterbox("Sisestage teise külje pikkus:"))
+def trapetsi_ümbermõõt():
+    trapetsi_haar1 = float(easygui.enterbox("Sisestage esimese haara pikkus:"))
+    trapetsi_haar2 = float(easygui.enterbox("Sisestage teise haara pikkus:"))
+    trapetsi_alus1 = float(easygui.enterbox("Sisestage esimese aluse pikkus:"))
+    trapetsi_alus2 = float(easygui.enterbox("Sisestage teise aluse pikkus:"))
+    trapetsi_ümbermõõt = trapetsi_haar1 + trapetsi_haar2 + trapetsi_alus1 + trapetsi_alus2
+def ringjoone_pikkus():
+    ringi_raadius = float(easygui.enterbox("Sisestage ringi raadius:"))
+    ringjoone_pikkus = ringi_raadius*pi
+def rombi_ümbermõõt():
+    rombi_külg = float(easygui.enterbox("Sisestage rombi külje pikkus:"))
+    rombi_ümbermõõt = 4 * rombi_külg
+def korrapärase_hulknurga_ümbermõõt():
+    külje_pikkus = float(easygui.enterbox("Sisestage korrapärase hulknurga külje pikkus:"))
+    külgede_arv = float(easygui.enterbox("Sisestage korrapärase hulknurga külgede arv"))
+    korrapärase_hulknurga_ümbermõõt = külgede_pikkus * külgede_arv
+nupud = ["Pindala","Ümbermõõt","Ruumala"]
+nupud1 = ["Kolmnurk", "Ruut", "Korrapärane Hulknurk", "Rööpkülik", "Trapets", "Ring", "Romb"]
+nupud2 = ["Kuup", "Kera", "Risttahukas", "Rööptahukas", "Risttahukas", "Koonus", "Püramiid", "Silinder"]
+vajutati = easygui.buttonbox("Mida soovite arvutada?", choices = nupud)
+if vajutati == "Pindala":
+    a = easygui.buttonbox("Mida soovite arvutada?", choices = nupud1)
+    if a == "Kolmnurk":
+       kolmnurga_pindala() 
+    elif a == "Ruut":
+        ruudu_pindala()
+    elif a == "Korrapärane Hulknurk":
+        hulknurga_pindala()
+    elif a ==
+elif vajutati == "Ümbermõõt":
+    easygui.buttonbox("Mida soovite arvutada?", choices = nupud1)
+elif vajutati == "Ruumala":
+    easygui.buttonbox("Mida soovite arvutada?", choices = nupud2)
